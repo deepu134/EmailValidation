@@ -1,11 +1,11 @@
 #!/bin/bash -x
 echo "Email Validation"
 read -p "enter your email" email
-pat='[a-zA-Z0-9]+@[a-zA-Z0-9]+[.][a-z]{2,3}$'
+pat='^[a-zA-Z0-9]*[_+-.]*[a-zA-Z0-9]+@[a-zA-Z0-9]+[.][a-z]{2,3}$'
 
 if [ $email =~ $pat ]
 then
-	echo "valid"
+	echo "$email valid"
 else
-	echo "not valid"
+	echo "$email not valid"
 fi 
